@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import CrystalField from './components/CrystalField';
 import Header from './components/Header';
 import CrystalField from './components/CrystalField';
 import GiftDetailModal from './components/GiftDetailModal';
@@ -10,7 +10,7 @@ function App() {
   const [timeFilter, setTimeFilter] = useState<TimeFilter>('today');
   const [showSmallChanges, setShowSmallChanges] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
+      <CrystalField />
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { gifts, trendData, lastUpdate } = useGiftData(timeFilter);
